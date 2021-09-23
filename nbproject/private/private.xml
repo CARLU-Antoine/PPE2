@@ -5,30 +5,35 @@
         <group>
             <file>file:/var/www/html/Projet%20tholdi%20/_head.inc.php</file>
             <file>file:/var/www/html/Projet%20tholdi%20/inscription.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/connexion.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/_saisirLigneDeReservation.traitement.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/connexiontraitement.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/modifiertraitement.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/modifiermdpraitement.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/_devis.traitement.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/menu.css</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/pdf.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/mediumFlat.png</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/tholdi.png</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/fpdf.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/reefer.png</file>
             <file>file:/var/www/html/Projet%20tholdi%20/devisfaits.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/tarif.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/devispdf.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/mediumOpen.png</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/fond.png</file>
             <file>file:/var/www/html/Projet%20tholdi%20/conteneur.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/flexitank.png</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/organigramme.png</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/smallDry.png</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/orga.png</file>
             <file>file:/var/www/html/Projet%20tholdi%20/connexionmauvaise.php</file>
             <file>file:/var/www/html/Projet%20tholdi%20/_footer.inc.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/reservfaites.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/smallFlat.png</file>
             <file>file:/var/www/html/Projet%20tholdi%20/devis.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/_reservation.traitement.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/install.txt</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/traitement.php</file>
             <file>file:/var/www/html/Projet%20tholdi%20/modifiermdp.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/_inscription.traitement.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/fpdf.css</file>
             <file>file:/var/www/html/Projet%20tholdi%20/deconnexion.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/setting.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/login.css</file>
             <file>file:/var/www/html/Projet%20tholdi%20/reservation.php</file>
             <file>file:/var/www/html/Projet%20tholdi%20/index.php</file>
             <file>file:/var/www/html/Projet%20tholdi%20/_saisirLigneDeReservation.php</file>
             <file>file:/var/www/html/Projet%20tholdi%20/_gestionBase.inc.php</file>
-            <file>file:/var/www/html/Projet%20tholdi%20/modifier.php</file>
+            <file>file:/var/www/html/Projet%20tholdi%20/Image/vlan.png</file>
         </group>
     </open-files>
 </project-private>

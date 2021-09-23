@@ -2,8 +2,9 @@
 
 <div id="conteneur">
     <?php
-    $listeConteneurs = obtenirTypeContainer();
+    $listeConteneurs = listeConteneurs();
     foreach ($listeConteneurs as $conteneurs):
+
         ?>
     <?php if ($conteneurs["numTypeContainer"] == 1) { ?>
             <div style="width: 18rem;">
@@ -16,6 +17,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                     <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>
@@ -32,6 +34,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                     <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>
@@ -48,6 +51,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                     <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>
@@ -64,6 +68,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                     <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>
@@ -80,6 +85,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                     <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>
@@ -96,6 +102,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                     <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>
@@ -112,6 +119,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                     <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>
@@ -128,6 +136,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                         <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>
@@ -144,6 +153,7 @@
                         Largeur : <?php echo $conteneurs["largeurCont"] ?><br>
                         Hauteur : <?php echo $conteneurs["hauteurCont"] ?><br>
                         Tarif : <?php echo $conteneurs["tarif"] ?><br>
+                        choix abonnement:<?php echo $conteneurs["codeDuree"] ?><br>
                     <a href="reservation.php" class="btn btn-primary">Reserver ?</a>
                 </div>
             </div>

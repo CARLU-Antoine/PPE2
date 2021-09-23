@@ -6,6 +6,7 @@ body{
     font-family: arial,sans-serif;
     font-size: 16px;
     line-height: 22px;
+
 }
 ul{
     font-size:30px;
@@ -70,4 +71,36 @@ header li:hover .menu-déroulant{
     position: static;
     margin-top:1%;
     margin-left: 23%;
+}
+
+.container{
+
+	border-collapse: collapse;
+	background-color:#01A9DB; 
+	min-width:10px;
+	width:1000px;
+	box-shadow: 0 7px 50px rgba(0,0,0,0.15);
+	cursor: pointer;
+	margin: 60px 1000px;
+	border:1px solid min-width white;
+	
+}
+
+thead tr{
+	background: #01A9DB;
+	color : white;
+	text-align: left;
+
+}
+th, td{
+	padding: 20px 10px;
+
+	
+
+}
+tbody tr, td, th{
+	border: 1px solid white;
+
+
+
 }

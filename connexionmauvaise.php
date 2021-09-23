@@ -2,7 +2,7 @@
 
 
         <div id="container" >
-            <form  id="formu" action="connexiontraitement.php" method="POST">
+            <form  id="formu" action="traitement.php" method="POST">
                 <h1>Connexion</h1>
             </p>mauvais login ou mot de passe</p>
                 

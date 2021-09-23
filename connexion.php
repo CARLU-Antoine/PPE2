@@ -1,11 +1,9 @@
-<?php include_once '_head.inc.php'; 
-session_start();
-?>
+<?php include_once '_head.inc.php'; ?>
 
 
 
         <div id="container" >
-            <form  id="formu" action="connexiontraitement.php" method="POST">
+            <form  id="formu" action="traitement.php" method="POST">
                 <h1>Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>

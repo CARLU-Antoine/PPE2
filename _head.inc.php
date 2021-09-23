@@ -1,5 +1,5 @@
-<?php include_once 'init.php'; ?>
-<?php include_once '_gestionBase.inc.php';
+<?php include_once 'init.php'; 
+include_once '_gestionBase.inc.php';
 session_start();
 ?>
 
@@ -37,6 +37,7 @@ session_start();
     </ul>
     </nav>
  </header>
+    
     
 <?php include_once '_footer.inc.php';?>
 

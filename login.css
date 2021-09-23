@@ -1,5 +1,5 @@
 body{
-    background: white;
+    background-color: aquamarine;
 }
 #container{
     width:400px;
@@ -72,11 +72,11 @@ span{
 #titre{
     display: flex;
     flex-direction: column;
-    justify-content:center;
+    position:absolute;
+    left:0%;
     align-items: center;
     text-align: center;
-    padding: 0 300px;
-    margin-top: 600px;
+    margin-top: 5%;
     font-size: 50px;
     color:black;
     margin-left: 30%;
@@ -98,4 +98,61 @@ span{
 #email{
     width: 340px;
     
+}
+
+#formul-devis{
+     width :90%;
+    height : auto;
+    opacity: 1;
+    line-height: 25px;
+    position: absolute;
+    left: 5%;
+    background-color :#ffffff;
+    border-collapse: collapse;
+    font-size: 2em;
+    border-style:solid;
+    text-align:center;
+}
+#logo-devis{
+    position: absolute;
+    left: 0%;
+}
+#formul-reserv{
+     width : 800px;
+    height : auto;
+    opacity: 1;
+    line-height: 25px;
+    position: absolute;
+    top: 40%;
+    right:10%;
+    background-color :#ffffff;
+    border-collapse: collapse;
+    font-size: 2em;
+    border-style:solid;
+    text-align:left;
+}
+
+#titre-reservation{
+        display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    padding: 0 300px;
+    margin-top: 600px;
+    font-size: 50px;
+    color:black;
+    margin-left:5%;
+}
+#titre-devis{
+        display: flex;
+    flex-direction: column;
+    position:absolute;
+    left:0%;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 50px;
+    color:black;
+    margin-left: 5%;
 }

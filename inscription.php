@@ -14,7 +14,7 @@ include_once '_gestionBase.inc.php';
 <div id="container">
     
                             
-            <form id="formu"action="_inscription.traitement.php" method="POST">
+            <form id="formu"action="traitement.php" method="POST">
             <h1>Inscription</h1>
                 
                 <div>

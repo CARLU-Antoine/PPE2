@@ -3,7 +3,7 @@
 include_once '_head.inc.php';
 ?>
    <div id="container" >
-       <form  id="formu" action="modifiermdpraitement.php" "method="POST">
+       <form  id="formu" action="traitement.php" "method="POST">
                 <h1>Modifier votre mot de passe</h1>
                 
                 <label><b>Entrer votre nouveau mot de passe:</b></label>

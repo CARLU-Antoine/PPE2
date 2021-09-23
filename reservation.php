@@ -1,10 +1,10 @@
 <?php include_once '_head.inc.php';
 session_start();?>
 
-<h1 id="titre"><center>Réaliser votre réservation</center></h1>
+<h1 id="titre-reservation"><center>Réaliser votre réservation</center></h1>
 
 <div id="formulaire">
-	<form action="_reservation.traitement.php" method="post" id="form_réservation">
+    <form action="traitement.php" method="post" id="form_réservation">
                        
             <div>
             Volume éstimé :
@@ -57,7 +57,7 @@ session_start();?>
             <option value="validé">validé</option>
             </select>
             </div>
-            
+        
              <input type="submit" value="valider">
                   
         </form>
