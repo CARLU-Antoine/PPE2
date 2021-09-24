@@ -1,9 +1,39 @@
-<?php include_once '_head.inc.php'; ?>
+<?php include_once '_head.inc.php'; 
 
 
+
+
+?>
 
         <div id="container" >
-            <form  id="formu" action="traitement.php" method="POST">
+            <form  id="formu" action="connexion.php" method="POST">
+                  <?php
+   $conlogin=$_POST["login"];
+   $conmdp=$_POST["mdp"];
+  
+    if (isset($_POST["login"]) && isset($_POST["mdp"])){
+    $pdo = gestionnaireDeConnexion();
+    $sql = "SELECT *, count(*) as nb FROM utilisateur "
+            . " WHERE LOGIN='$conlogin' AND MDP='$conmdp' GROUP BY code";
+    $prep = $pdo->prepare($sql);
+
+
+    $prep->execute();
+    $resultat = $prep->fetch();
+ 
+    if ($resultat["nb"] == 1) {
+        $nom = $_POST['login'];
+        $_SESSION['login'] = $nom;
+          header("Location:index.php");
+        
+    }
+    else{
+        echo 'mauvais login ou mot de passe';
+    $prep->closeCursor();
+    }
+    }
+    ?>
+    
                 <h1>Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>

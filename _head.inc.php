@@ -26,9 +26,10 @@ session_start();
                 <li><a href="setting.php">Paramètre</a></li>
                 <li><a href="reservfaites.php">Vos réservations</a></li>
                 <li><a href="devisfaits.php">Vos devis</a></li>
+                <li><a href="deconnexion.php">deconnexion</a></li>
                 </ul>
         </li>
-        <a id="deconnexion"  type="button" href="deconnexion.php"><button>deconnexion</button></a><?php
+        <?php
          }else{
                ?> <li id="connexion"><a href="connexion.php">CONNEXI0N</a></li>
                

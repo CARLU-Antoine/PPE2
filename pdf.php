@@ -14,7 +14,7 @@ session_start();
             $choix=$_POST["codeDuree"];
             $lib=$_POST['numTypeContainer'];
             $_SESSION['numTypeContainer']=$lib;
-            $codeDevis=$_SESSION["codeDevis"];
+
             
             
             $sqle= "SELECT tarif FROM tarificationContainer WHERE codeDuree='$choix' and numTypeContainer=$lib";
@@ -86,7 +86,7 @@ $pdf->Cell(59 ,5,'',0,1);//end of line
 
 $pdf->Cell(130 ,5,'78000',0,0);
 $pdf->Cell(40 ,5,'Numero devis',0,0);
-$pdf->Cell(34 ,5,$codeDevis,0,1);//end of line
+$pdf->Cell(34 ,5,$_SESSION["codeDevis"],0,1);//end of line
 
 $pdf->Cell(130 ,5,'78000',0,0);
 $pdf->Cell(40 ,5,'choix abonnement',0,0);

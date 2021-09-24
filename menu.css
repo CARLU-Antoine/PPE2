@@ -45,6 +45,8 @@ header li:hover .menu-déroulant{
     display: none;
     background-color: #01A9DB;
     width: 300px;
+    position:absolute;
+    right:0%;
 }
 .menu-déroulant li {
     display: block;
@@ -55,22 +57,17 @@ header li:hover .menu-déroulant{
 .menu-déroulant li:hover a {
     background-color:white;
     color:black;
-    
 }
 #connexion{
     position: absolute;
-    right: 0%;
+    right: 2%;
 }
-#deconnexion{
-   position:absolute;
-   right:1%;
-   margin-top: 1%;
-   
-}
+
 #menu-login{
-    position: static;
     margin-top:1%;
-    margin-left: 23%;
+     position:absolute;
+    right:2%;
+    
 }
 
 .container{

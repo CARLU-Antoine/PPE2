@@ -49,7 +49,7 @@
                 <?php
                 foreach ($collectionVilles as $ville) :
                     ?>
-                    <option value="<?php echo $ville["codeVille"]; ?>">
+                    <option <?php echo $ville["codeVille"]; ?>">
                         <?php echo $ville["nomVille"]; ?>
                     </option>
                 <?php endforeach; ?>

@@ -22,7 +22,6 @@ include_once '_head.inc.php';
                         <p>votre numéro de téléphone: <?php echo $user["telephone"]; ?></p>
                         <p>votre contact: <?php echo $user["contact"]; ?></p>
                         <p>votre Pays: <?php echo $user["codePays"]; ?></p>
-                        <a href="modifierinformation.php">modifier vos informations personnelles</a>
        
                 <?php endforeach; ?>
         </div>

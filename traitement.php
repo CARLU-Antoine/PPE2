@@ -55,11 +55,6 @@ if (isset($_SESSION['login'])) {
 }
 
 
-   $conlogin=$_POST["login"];
-   $conmdp=$_POST["mdp"];
-   
-connexion($conlogin, $conmdp);
-
 $test=$_POST["mailtest"];
 
 VerificationAdrMel($test);

@@ -1,5 +1,4 @@
 <?php
-include_once '_gestionBase.inc.php';
 include_once '_head.inc.php';
 session_start();
 
@@ -9,7 +8,7 @@ $collectionTypeContainer = obtenirTypeContainer();
 ?>
 <h1 id="titre"><center>Finaliser votre réservation </center></h1>
 <form id ="formulaire" action="traitement.php" method="post">
-
+    <div>
     Type Container 
     <select name="numTypeContainer">
         <?php
@@ -21,12 +20,11 @@ $collectionTypeContainer = obtenirTypeContainer();
             </option>
         <?php endforeach; ?>
     </select>
+    </div>
 
-
-
+    <div>
     quantité:
     <input type="text" name="qteReserver">
-            <div>
             choix d'abonnement:
             <select name="codeDuree">
             <option value="JOUR">Jours</option>
@@ -35,17 +33,26 @@ $collectionTypeContainer = obtenirTypeContainer();
             </select>
             <a type="button" href="_saisirLigneDeReservation.php"><button>choisir votre abonnement</button></a>
             </div>
-
+    
             
 
     <input type="submit" value="Ajouter une ligne de reservation" >
-    
-      
+    <div>
+     <?php
+    $collectionMontantTotal= obtenirMontantTotal();
+     foreach ($collectionMontantTotal as $montant):
+            ?>
+             Montant Total: <?php echo $montant["montantTotal"]; ?>
 
 
+        <?php endforeach; ?>
+    </div>
+    <a id="button_final" href="index.php">finaliser votre réservation</a>
+   
+           
 </form>
 
-<a href="index.php">finaliser votre réservation</a>
+
 <div id="formul-reserv" >
                 <strong>Vos Réservations:</strong>
                 <?php
@@ -59,7 +66,6 @@ $collectionTypeContainer = obtenirTypeContainer();
                         <p>Ville d'arrivée: <?php echo $infos["nomVille"]; ?></p>
                         <p>type de containers: <?php echo $infos["libelleTypeContainer"];?></p>
                         <p>quantité de containers: <?php echo $infos["qteReserver"];?></p>
-                        <p>état de votre réservation: <?php echo $infos["etat"];?></p>
                         <p>tarif à l'unité: <?php echo $infos["tarif"];?></p>
                         <p>tarif total: <?php echo $infos["qtarif"];?></p>
                         

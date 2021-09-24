@@ -1,5 +1,5 @@
 body{
-    background-color: aquamarine;
+    background-image:url(Image/fond.png);
 }
 #container{
     width:400px;
@@ -47,7 +47,7 @@ span{
 
 #formulaire{
     
-    width : auto;
+    width : 40%;
     height : auto;
     margin : 0px; padding : 25px;
     opacity: 1;
@@ -118,13 +118,13 @@ span{
     left: 0%;
 }
 #formul-reserv{
-     width : 800px;
+     width : 50%;
     height : auto;
     opacity: 1;
     line-height: 25px;
     position: absolute;
     top: 40%;
-    right:10%;
+    right:2%;
     background-color :#ffffff;
     border-collapse: collapse;
     font-size: 2em;
@@ -139,10 +139,10 @@ span{
     align-items: center;
     text-align: center;
     padding: 0 300px;
-    margin-top: 600px;
+    margin-top: 500px;
     font-size: 50px;
     color:black;
-    margin-left:5%;
+    margin-left:10%;
 }
 #titre-devis{
         display: flex;
@@ -155,4 +155,13 @@ span{
     font-size: 50px;
     color:black;
     margin-left: 5%;
+}
+#button_final{
+  transition-duration: 0.4s;
+  background-color:white;
+}
+
+#button_final:hover {
+  background-color: #01A9DB; /* Green */
+  color: white;
 }

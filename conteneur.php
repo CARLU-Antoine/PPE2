@@ -1,8 +1,29 @@
 <?php include_once '_head.inc.php'; ?>
 
+    <h1 id="titre"><center>Consulter liste de conteneurs </center></h1>
+<form id ="formulaire" action="conteneur.php" method="post">
+
+  
+            <div>
+            choix d'abonnement:
+            <select name="codeDuree">
+            <option value="JOUR">Jours</option>
+            <option value="TRIMESTRE">Trimestre</option>
+            <option value="ANNEE">Année</option>
+            </select>
+            </div>     
+
+    <input type="submit" value="Ajouter une ligne de reservation" >
+
+</form>
+
+
+
 <div id="conteneur">
     <?php
-    $listeConteneurs = listeConteneurs();
+    
+    $choix=$_POST['codeDuree'];
+    $listeConteneurs = listeConteneurs($choix);
     foreach ($listeConteneurs as $conteneurs):
 
         ?>

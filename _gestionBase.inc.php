@@ -22,14 +22,25 @@ function obtenirTypeContainer() {
     return $lesContainers;
 }
 
+function obtenirMontantTotal() {
+      $choix=$_SESSION['codeDuree'];
+      $codeReservation=$_SESSION["codeReservation"];
+      
+    $pdo = gestionnaireDeConnexion();
+    $req = "SELECT codeReservation,SUM(qteReserver*tarif) as 'montantTotal' FROM reserver,tarificationContainer WHERE reserver.numTypeContainer=tarificationContainer.numTypeContainer "
+           . "and reserver.codeReservation=$codeReservation and tarificationContainer.codeDuree='$choix' GROUP by codeReservation";
+    $pdoStatement = $pdo->query($req);
+    $lesContainers = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
+    return $lesContainers;
+}
 
 /* fonction de récupérer la liste des conteneurs dans la base de données sous forme de tableau */
 
-function listeConteneurs() {
+function listeConteneurs($choix) {
     $lesConteneurs = array();
     $pdo = gestionnaireDeConnexion();
     if ($pdo != NULL) {
-        $req = "SELECT * FROM tarificationContainer,typeContainer WHERE tarificationContainer.numTypeContainer=typeContainer.numTypeContainer ORDER by tarificationContainer.numTypeContainer";
+        $req = "select * from tarificationContainer,typeContainer where tarificationContainer.numTypeContainer=typeContainer.numTypeContainer and tarificationContainer.codeDuree='$choix'";
         $pdoStatement = $pdo->query($req);
         $lesConteneurs = $pdoStatement->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -139,7 +150,7 @@ function infosDevis(){
 
 function creerDevis($dateDebutDevis,$volume,$nbContainers){ 
              
-    if (isset($_POST['nbcontainers']) && isset($_POST['volume'])){
+    if (isset($_SESSION['login'])) {
         session_start();
         $pdo = gestionnaireDeConnexion();
         
@@ -162,6 +173,9 @@ function creerDevis($dateDebutDevis,$volume,$nbContainers){
     $pdo->exec($reqa);
 
     
+}
+else{
+      header("location:connexion.php");
     }
 }
 
@@ -222,37 +236,13 @@ $pdo->exec($sql);
     
 }
 
-function connexion($conlogin,$conmdp){
-    if (isset($_POST["login"]) && isset($_POST["mdp"])){
-    $pdo = gestionnaireDeConnexion();
-    $sql = "SELECT *, count(*) as nb FROM utilisateur "
-            . " WHERE LOGIN='$conlogin' AND MDP='$conmdp' GROUP BY code";
-    $prep = $pdo->prepare($sql);
-
-
-    $prep->execute();
-    $resultat = $prep->fetch();
- 
-    if ($resultat["nb"] == 1) {
-        $nom = $_POST['login'];
-        $_SESSION['login'] = $nom;
-          header("Location:index.php");
-        
-    }
-    else{
-    header("Location: connexionmauvaise.php");
-    $prep->closeCursor();
-    }   
-  }
-
-}
 
 function ajouterUtilisateur($role,$raisonSociale,$adresse,$cp,$ville,$adrMel,$telephone,$contact,$login,$mdp,$pays){
     if (isset($_POST['contact']) && isset($_POST['role'])){
  
     $pdo = gestionnaireDeConnexion();
     $sql = "SELECT *, count(*) as nb FROM utilisateur "
-            . " WHERE adrMel='$adrMel' GROUP BY code";
+            . " WHERE adrMel='$adrMel' or login='$login' GROUP BY code";
     $prep = $pdo->prepare($sql);
     
     $prep->execute();
