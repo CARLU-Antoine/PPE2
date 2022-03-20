@@ -28,9 +28,9 @@ if (isset($_SESSION['login'])) {
     AjouterUneReservation($dateDebutReservation, $dateFinReservation, $volumeEstime, $codeVilleMiseDisposition, $codeVilleRendre, $etat, $code);
     
     $sql= "SELECT codeReservation FROM reservation ORDER BY codeReservation DESC LIMIT  1";
-    $prepa = $pdo->prepare($sql);
-       $prepa->execute();
-    $resultata = $prepa->fetch();
+    $prepa = $pdo->prepare($sql);//requête préparé
+       $prepa->execute();//excécuter la requête 
+    $resultata = $prepa->fetch();//création d'un tableau a partir du résultat de la requête SQL
 
     $codeReservation=$_SESSION["codeReservation"]=$resultata['codeReservation'];
      $choix= $_POST["codeDuree"];
@@ -54,27 +54,3 @@ if (isset($_SESSION['login'])) {
       header("location:connexion.php");
 }
 
-
-$test=$_POST["mailtest"];
-
-VerificationAdrMel($test);
-
-    $newmdp= $_GET['newmdp'];
-    $pseudo=$_SESSION['mailtest'];
-    
-    modifierMDP($newmdp, $pseudo);
-
-    $role = htmlspecialchars($_POST['role']);
-    $raisonSociale = htmlspecialchars($_POST['raisonSociale']);
-    $adresse = htmlspecialchars($_POST['adresse']);
-    $cp = htmlspecialchars($_POST['cp']);
-    $ville = htmlspecialchars($_POST['ville']);
-    $adrMel = htmlspecialchars($_POST['adrMel']);
-    $telephone = htmlspecialchars($_POST['telephone']);
-    $contact = htmlspecialchars($_POST['contact']);
-    $login = htmlspecialchars($_POST['login']);
-    $mdp = htmlspecialchars($_POST['mdp']);
-    $pays = htmlspecialchars($_POST['codePays']);
-    
-    ajouterUtilisateur($role, $raisonSociale, $adresse, $cp, $ville, $adrMel, $telephone, $contact, $login, $mdp, $pays);
-    

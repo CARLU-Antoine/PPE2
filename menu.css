@@ -1,103 +1,120 @@
-*{
-    box-sizing: border-box;
-}
+/*principale*/
+
 body{
-    color:gray;
+    color: black;
+    /*background-image: url(Image/fondBleu.png);*/
+    background:whitesmoke;
     font-family: arial,sans-serif;
     font-size: 16px;
     line-height: 22px;
 
 }
-ul{
-    font-size:30px;
-}
-a{
-    text-decoration: none;
-    color: gray;
-}
 nav{
-    margin: 0 auto;
-    width: 1000 px;
+    width: 100%;
+    margin-top:-2%;
+    background-color: white;
+    position: sticky;
+
 }
 header{
-    border-bottom: 10px solid gray;
-    background-color: #01A9DB;
-    
+    margin-top:2%;
 }
 
-header li{
-    display: inline-block;
-    vertical-align: top;
-}
-header li a{
-    display: block;
-    padding: 20px;
-}
-header li :hover a {
-    background-color: #01A9DB;
-    color: wheat;
-}
-header li:hover .menu-déroulant{
-    display: block;
+nav ul{
+    list-style-type: none;
 }
 
-.menu-déroulant{
+nav ul li{
+    float: left;
+    width: 10%;
+    text-align: center;
+    position: relative;
+}
+
+nav ul::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+}
+
+nav a:hover{
+    color: orange;
+    border-bottom: 2px solid gold;
+}
+
+.sous{
     display: none;
-    background-color: #01A9DB;
-    width: 300px;
-    position:absolute;
-    right:0%;
+    box-shadow: 0px 1px 2px #CCC;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
 }
-.menu-déroulant li {
+nav > ul li:hover .sous{
     display: block;
 }
-.menu-déroulant li a{
-    color:black;
+.sous li{
+    display:block;
+    width: 100%;
+    text-align: left;
 }
-.menu-déroulant li:hover a {
-    background-color:white;
-    color:black;
+.sous a{
+    padding: 10px;
+    border-bottom: none;
+}
+.sous a:hover{
+    border-bottom: none;
+    background-color: RGBa(200,200,200,0.1);
+}
+.deroulant > a::after{
+    content:" ▼";
+    font-size: 12px;
+}
+
+.deroulant{
+    position: absolute;
+    right: 0%;
 }
 #connexion{
     position: absolute;
-    right: 2%;
+    right: 0%;
 }
 
-#menu-login{
-    margin-top:1%;
-     position:absolute;
-    right:2%;
-    
+#section_index{
+    color: black;
+    font-size: 20px;
+
+}
+
+#section_index h1{
+    text-align: center;
+}
+
+
+#devh1{
+    color: black;
+    font-size: 40px;
 }
 
 .container{
 
-	border-collapse: collapse;
-	background-color:#01A9DB; 
-	min-width:10px;
-	width:1000px;
-	box-shadow: 0 7px 50px rgba(0,0,0,0.15);
-	cursor: pointer;
-	margin: 60px 1000px;
-	border:1px solid min-width white;
-	
-}
-
-thead tr{
-	background: #01A9DB;
-	color : white;
-	text-align: left;
+    border-collapse: collapse;
+    min-width:10px;
+    width:1000px;
+    cursor: pointer;
+    margin: 60px 1000px;
+    border:1px solid min-width white;
 
 }
-th, td{
-	padding: 20px 10px;
-
-	
-
-}
-tbody tr, td, th{
-	border: 1px solid white;
 
 
 
-}
+

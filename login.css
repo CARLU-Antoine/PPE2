@@ -1,12 +1,9 @@
-body{
-    background-image:url(Image/fond.png);
+.container td, th{
+    border: 1px solid white;
+    padding: 20px 10px;
+    background: white;
 }
-#container{
-    width:400px;
-    margin:0 auto;
-    margin-top:10%;
-    text-align: left;
-}
+
 #container h1{
     width: 100%;
     text-align: center;
@@ -40,128 +37,91 @@ input[type=submit]:hover {
     border: 1px solid black;
 }
 
-span{
-   color: red;
- 
-}
 
-#formulaire{
-    
+
+#formulaire-setting{
+    padding: 5%;
     width : 40%;
     height : auto;
-    margin : 0px; padding : 25px;
     opacity: 1;
-    line-height: 100px;
-    position: absolute;
-    top: 40%;
-    left: 0%;
-    background-color :#ffffff;
-    border-collapse: collapse;
-    font-size: 2em;
-    border-style:solid;
+    line-height: 50px;
+    display: block;
+    margin-top:10%;
+    margin-left: auto;
+    margin-right: auto;
     text-align:left;
-}
+    color:grey;
+    background-color:white;
 
-#formu{
-    width:100%;
-    padding: 30px;
-    border: 1px solid #f1f1f1;
-    background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-#titre{
-    display: flex;
-    flex-direction: column;
-    position:absolute;
-    left:0%;
-    align-items: center;
+#formulaire-Affichage-Reservation{
+    padding: 5%;
+    width : 70%;
+    height : auto;
+    opacity: 1;
+    line-height: 50px;
+    display: block;
+    margin-top:10%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:left;
+    color:grey;
+    background-color:white;
+
+}
+.tableau{
+
+    cursor: pointer;
+    margin-top: 7%;
+
+}
+.tableau td, th{
+    border: 1px solid white;
+    padding: 20px 10px;
+    background: white;
     text-align: center;
-    margin-top: 5%;
-    font-size: 50px;
-    color:black;
-    margin-left: 30%;
 }
-#formul-session{
-     width : 800px;
-    height : auto;
-    opacity: 1;
-    line-height: 25px;
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    background-color :#ffffff;
-    border-collapse: collapse;
-    font-size: 2em;
-    border-style:solid;
-    text-align:left;
+.tableau-Reservation{
+    cursor: pointer;
+    margin-top: 7%;
+
+
 }
-#email{
-    width: 340px;
-    
+.tableau-Reservation td, th{
+    border-color:black;
+    width: auto;
+    padding: 20px 10px;
+    background: white;
+    text-align: center;
 }
 
-#formul-devis{
-     width :90%;
-    height : auto;
-    opacity: 1;
-    line-height: 25px;
-    position: absolute;
-    left: 5%;
-    background-color :#ffffff;
-    border-collapse: collapse;
-    font-size: 2em;
-    border-style:solid;
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 30px;
+  margin: auto;
+}
+
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#message-Erreur{
+    color:red;
     text-align:center;
-}
-#logo-devis{
-    position: absolute;
-    left: 0%;
-}
-#formul-reserv{
-     width : 50%;
-    height : auto;
-    opacity: 1;
-    line-height: 25px;
-    position: absolute;
-    top: 40%;
-    right:2%;
-    background-color :#ffffff;
-    border-collapse: collapse;
-    font-size: 2em;
-    border-style:solid;
-    text-align:left;
-}
-
-#titre-reservation{
-        display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    text-align: center;
-    padding: 0 300px;
-    margin-top: 500px;
-    font-size: 50px;
-    color:black;
-    margin-left:10%;
-}
-#titre-devis{
-        display: flex;
-    flex-direction: column;
-    position:absolute;
-    left:0%;
-    align-items: center;
-    text-align: center;
-    margin-top: 5%;
-    font-size: 50px;
-    color:black;
-    margin-left: 5%;
-}
-#button_final{
-  transition-duration: 0.4s;
-  background-color:white;
-}
-
-#button_final:hover {
-  background-color: #01A9DB; /* Green */
-  color: white;
+    font-size:70%;
+    font-style: oblique;
 }

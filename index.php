@@ -5,7 +5,7 @@ include_once '_head.inc.php';
 
 <section id ="section_index">
     <br>
-            <h1><strong>Présentation de l'entreprise tholdi</strong></h1>
+            <h1><u><strong>Entreprise Tholdi</strong></u></h1>
 <br>
             <h3><u><strong>LE SECTEUR D’ACTIVITE : TRANSPORT MARITIME</strong></u></h3>
 <br>
@@ -117,108 +117,6 @@ Le siège social à Paris (Gennevilliers) accueille, outre la direction généra
 communication. Ces services sont regroupés de manière fonctionnelle sous la direction administrative et financière, la direction de l’exploitation et la direction des systèmes d’information.
 <br><br>
 <img src="Image/orga.png"/>
-<br><br>
-
-<h9><u><strong>LA DSI</strong></u></h9>
-<br><br>
-
-La DSI (Direction des Systèmes d’Information) est une entité importante de l’entreprise. 
-Elle participe aux choix stratégiques de l’organisation et a pour mission de définir et mettre en œuvre la politique informatique en accord avec 
-la stratégie générale du groupe et ses objectifs de performance.
-<br><br>
-
-Le système d’information de l’entreprise est interconnecté à ceux de ses différents partenaires (transporteurs maritimes, transporteurs routiers et ferroviaires, 
-propriétaires et utilisateurs des containeurs, etc.).
-<br><br>
-
-À ce titre, elle doit garantir la continuité du service informatique fourni aux utilisateurs ou partenaires et anticiper les changements et leurs impacts métiers sur le système d’information.
-<br><br>
-
-Le siège social est le cœur du système d’information de l’entreprise, mais un service informatique de proximité [SIP] est présent sur chaque implantation portuaire.
-<br><br>
-
-Le SIP est responsable de l’assistance aux utilisateurs locaux et de la maintenance des ressources locales (infrastructure réseau et serveurs d’exploitation). 
-Le SIP prend également en charge des projets qui concernent ponctuellement leur site.
-<br><br>
-
-<h9><u><strong>LE CŒUR DE RESEAU.</strong></u></h9>
-
-<br><br>
-
-Le réseau informatique du siège est basé sur une architecture Ethernet commutée à 100 Mb/s pour la connexion des solutions techniques 
-d’accès et à 1 Gb/s pour tous les serveurs et le protocole TCP/IP v4.
-<br><br>
-<img src="Image/batiment.png"/>
-<br><br>
-
-Les serveurs assurent les fonctions de base du réseau (DHCP, DNS, Annuaire et gestion centralisée des environnements) et 
-les fonctions de communication (Intranet, Messagerie, Agenda partagé, etc.).
-<br><br>
-
-On trouve aussi de nombreuses applications métier (bases d'information dédiés à la gestion des containers, etc.) et les fonctions plus génériques de toute entreprise (Progiciel de 
-Gestion Intégré avec ses modules RH, GRC, etc.). Un nombre croissant de serveurs est virtualisé.
-<br><br>
-
-Toutes les fonctions de redondances (RAID, alimentation, lien réseau redondant, Spanning-tree, clustering, etc.) sont mises en œuvre pour assurer une tolérance aux pannes maximale.
-<br><br>
-
-Constitué autour de VLAN, le réseau local est segmenté par services de manière à fluidifier le trafic.
-<br><br>
-<img src="Image/vlan.png"/>
-
-<br><br>
-
-Tous les utilisateurs des différents sites accèdent aujourd’hui à l’internet via le serveur proxy du siège.
-
-<br><br>
-
-Chaque employé de l'entreprise a une adresse de courriel de la forme « p.nom@tholdi.com » hébergée sur le serveur de messagerie du siège.
-<br><br>
-
-<h10><u><strong>LES SITES PORTUAIRES</strong></u></h10>
-<br><br>
-Les différents sites sont reliés au siège par des liaisons de type SDSL à 10 Mb/s.
-<br><br>
-
-Sur chacune des implantations portuaires, le système informatique est organisé en réseaux locaux :
-<br><br>
-
-  172.31.0.0/25   Gennevilliers - Paris<br><br>
-  172.30.0.0/24   Le Havre<br><br>
-  172.29.0.0/24   Marseille<br><br>
-  172.28.0.0/24   Anvers<br><br>
-  172.27.0.0/24   Barcelone<br><br>
-  172.26.0.0/24   Hambourg<br><br>
-  172.25.0.0/24   Rotterdam<br><br>
-  172.24.0.0/24   Gênes<br><br>
-
-Les données de l'entreprises sont considérées comme stratégiques et ne peuvent tolérer ni fuite, ni destruction. L'ensemble des informations est répliqué quotidiennement à Paris.
-<br><br>
-
-Les liaisons entre tous les ports et le siège parisien utilise un réseau privé virtuel (RPV), appelé aussi VPN (Virtual Private Network).
-<br><br>
-
-Entre le site de Rotterdam et le siège de Paris, la configuration du RPV est la suivante :
-<br><br>
-
--Le serveur RPV du réseau de Rotterdam « ROT-RPV » est paramétré pour faire du routage et de la « tunnelisation », 
-il est configuré à l’adresse réelle 172.25.0.1/24 et possède une carte virtuelle d’adresse 10.0.25.1/16 pour le tunnel VPN.
-<br><br>
-
-Le serveur de Paris hébergeant, « THO-RPV » est configuré à l’adresse réelle 172.31.0.1/25 et possède une carte virtuelle d’adresse 10.0.31.1/16 pour le tunnel VPN.
-<br><br>
-
-L'informatique est fortement répandue, notamment sur le site de Rotterdam où chaque employé est équipé d'une solution technique d’accès 
-(poste fixe ou mobile). On dénombre ainsi plus de 350 terminaux.
-<br><br>
-
-Sur chaque site, les bureaux de la logistique accueillent l’infrastructure locale et les serveurs locaux nommés XXX-RPV et XXX-APPLI (XXX représentant 
-l’indicatif du site, par exemple MAR-APPLI pour Marseille, HAM-APPLI pour Hambourg et ROT-DNS pour un serveur DNS à Rotterdam.
-<br><br>
-
-<h11><u><strong>ORGANISATION DU RESEAU THOLDI</strong></u></h11>
-<br><br>
-<img src="Image/reseauTholdi.png"/>
 <br><br>
 </section>
  <?php        include_once '_footer.inc.php';
