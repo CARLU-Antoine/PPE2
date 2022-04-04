@@ -37,6 +37,7 @@ session_start();
                             <ul class="sous">
                                 <li><a href="setting.php">Paramètre</a></li>
                                 <li><a href="reservfaites.php">Vos réservations</a></li>
+                                <li><a href="devis.php">Vos devis</a></li>
                                 <li><a href="deconnexion.php">deconnexion</a></li>
                             </ul>
                         </li>

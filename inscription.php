@@ -1,55 +1,84 @@
-<?php include_once '_head.inc.php'; ?>
-
 <?php
-include_once '_gestionBase.inc.php';
-
-$pdo = gestionnaireDeConnexion();
-
+include_once '_head.inc.php';
 $collectionPays = obtenirPays();
 ?>
 
 
 <div class="col-md-7 col-lg-8">
-    <h4 style="position: absolute;top: 50%; left: 50%; transform: translate(-50%, -1000%);">Inscription</h4>
-    <form style=" position: absolute;top: 50%; left: 50%; transform: translate(-50%, -20%);" class="needs-validation" novalidate action="inscription.php" method="POST">
+    <h4 style="position: absolute;top: 70%; left: 50%; transform: translate(-50%, -1000%);">Inscription</h4>
+    <form style=" position: absolute;top: 80%; left: 50%; transform: translate(-50%, -20%);" class="needs-validation" novalidate action="traitement.php" method="POST">
         <?php
-        //création d'un compte
-        $role = htmlspecialchars($_POST['role']);
-        $raisonSociale = htmlspecialchars($_POST['raisonSociale']);
-        $adresse = htmlspecialchars($_POST['adresse']);
-        $cp = htmlspecialchars($_POST['cp']);
-        $ville = htmlspecialchars($_POST['ville']);
-        $adrMel = htmlspecialchars($_POST['adrMel']);
-        $telephone = htmlspecialchars($_POST['telephone']);
-        $contact = htmlspecialchars($_POST['contact']);
-        $login = htmlspecialchars($_POST['login']);
-        $mdpAvant = htmlspecialchars($_POST['mdp']);
-        $pays = htmlspecialchars($_POST['codePays']);
-        if (!empty($mdpAvant)) {
-            $mdp = md5($mdpAvant);
-        }
+        if (isset($_GET['reg_err'])) {
+            $err = htmlspecialchars($_GET['reg_err']);
 
+            switch ($err) {
+                case 'success':
+                    ?>
+                    <div class="alert alert-success">
+                        <strong>Succès</strong> inscription réussie !
+                    </div>
+                    <?php
+                    break;
 
+                case 'password':
+                    ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> mot de passe différent
+                    </div>
+                    <?php
+                    break;
 
-        if (isset($_POST['valider'])) {
-            $pdo = gestionnaireDeConnexion();
-            $sql = "SELECT *, count(*) as nb FROM utilisateur "
-                    . " WHERE adrMel='$adrMel' or login='$login' GROUP BY code";
-            $prep = $pdo->prepare($sql);
+                case 'email':
+                    ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> email non valide
+                    </div>
+                    <?php
+                    break;
 
-            $prep->execute();
-            $resultat = $prep->fetch();
+                case 'email_length':
+                    ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> email trop court
+                    </div>
+                    <?php
+                    break;
 
-
-            if ($resultat["nb"] == 1) {
-                ?><div class="alert alert-danger" role="alert">un compte est déjà inscrit avec ses paramètres</div><?php
-            } else if (!empty($role) && !empty($raisonSociale) && !empty($adresse) && !empty($cp) && !empty($ville) && !empty($adrMel) && !empty($telephone) && !empty($contact) && !empty($login) && !empty($mdpAvant) && !empty($pays)) {
-                $sql = "INSERT INTO utilisateur(role,raisonSociale,adresse,cp,ville,adrMel,telephone,contact,login,mdp,codePays)
-	 VALUES ('$role','$raisonSociale','$adresse','$cp','$ville','$adrMel','$telephone','$contact','$login','$mdp','$pays')";
-                $pdo->exec($sql);
-                header("location:connexion.php");
-            } else {
-                ?><div class="alert alert-danger" role="alert">un ou plusieurs champs sont imcomplet</div><?php
+                case 'pseudo_length':
+                    ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> pseudo trop court
+                    </div>
+                    <?php
+                    break;
+                case 'email_already':
+                    ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> compte deja existant avec cet email
+                    </div>
+                    <?php
+                    break;
+                case 'login_already':
+                    ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> compte deja existant avec cet identifiant
+                    </div>
+                    <?php
+                    break;
+                    case 'password_length':
+                    ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> mot de passe trop court (10 caractères minimum)
+                    </div>
+                    <?php
+                    break;
+                
+                case 'champs_Non_Saisie':
+                    ?>
+                    <div class="alert alert-danger">
+                        <strong>Erreur</strong> un ou plusieurs champs n'ont pas était saisies
+                    </div>
+                <?php
             }
         }
         ?>
@@ -99,8 +128,13 @@ $collectionPays = obtenirPays();
             </div>
 
             <div class="col-12">
-                <label for="address2" class="form-label">Mot de passe</label>
+                <label for="password" class="form-label">Mot de passe</label>
                 <input type="password" class="form-control" name="mdp" placeholder="mot de passe">
+
+            </div>
+            <div class="col-12">
+                <label for="address2" class="form-label">Confirmation mot de passe</label>
+                <input type="password" class="form-control" name="mdpConfirmation" placeholder="mot de passe">
 
             </div>
 
@@ -117,7 +151,7 @@ $collectionPays = obtenirPays();
                 </select>
             </div>
 
-            <button class="w-100 btn btn-primary btn-lg" type="submit" name="valider">Inscription</button>
+            <button class="w-100 btn btn-primary btn-lg" type="submit" name="validerInscription">Inscription</button>
     </form>
 </div>
 </div>
